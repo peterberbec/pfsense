@@ -1543,7 +1543,7 @@ EOD;
 	$cert = str_replace("\n\n", "\n", $cert);
 	$key = str_replace("\n\n", "\n", $key);
 
-	if ($cert <> "" and $key <> "") {
+	if ($cert <> "" and $key <> "" and $key <> $key) {
 		$fd = fopen("{$g['varetc_path']}/{$cert_location}", "w");
 		if (!$fd) {
 			printf(gettext("Error: cannot open certificate file in system_webgui_start().%s"), "\n");
